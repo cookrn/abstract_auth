@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Ryan Cook"]
   s.email       = ["ryan@quickleft.com"]
   s.homepage    = ""
-  s.summary     = %q{A gem to safely provide external application resources with a coherent API to a host application's authentication procedures.}
-  s.description = %q{A gem to safely provide external application resources with a coherent API to a host application's authentication procedures.}
+  s.summary     = %q{A gem to safely provide external application resources with a coherent and configurable API to a host application's authentication procedures.}
+  s.description = %q{A gem to safely provide external application resources with a coherent and configurable API to a host application's authentication procedures.}
 
   s.rubyforge_project = "abstract_auth"
 

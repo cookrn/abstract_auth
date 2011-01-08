@@ -1,3 +1,9 @@
 module AbstractAuth
-  # Your code goes here...
+
+  # Yield AbstractAuth on setup for fancy configuration
+  def setup
+    yield self
+  end
+
 end
+

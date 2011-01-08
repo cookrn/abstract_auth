@@ -2,4 +2,5 @@ pkg/*
 *.gem
 .bundle
 .rvmrc
+*.sw[a|o|p]
 
