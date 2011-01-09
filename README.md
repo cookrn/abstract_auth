@@ -43,12 +43,12 @@ this somewhere in a setup area of your app...
       config.requires :authenticated_resource
     end
 
-Then, when you need it, you should be able to call [[AbstractAuth.authenticated_resource]]
+Then, when you need it, you should be able to call `AbstractAuth.authenticated_resource`
 and expect the host application to have provided the code that will
 return to you the resource object that is currently authenticated (e.g.
 User). How do you go about making sure a host application complies with
 your every whim? In a Rails application, for instance, you could
-instruct them to setup an abstract_auth.rb initializer in [[config/initializers]]
+instruct them to setup an abstract_auth.rb initializer in `config/initializers`
 
     # The user's implementation of your desired API
     AbstractAuth.implement :authenticated_resource do
@@ -95,7 +95,7 @@ Assuming everything goes as planned, you would be able to call...
 ...to determine whether a resource was authenticated.
 
 Finally, if you make a call to expected API that the host app has not
-implemented, an [[AbstractAuth::NotImplementedError]] will be thrown.
+implemented, an `AbstractAuth::NotImplementedError` will be thrown.
 
 ##Notes
 
