@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Ryan Cook"]
   s.email       = ["ryan@quickleft.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/cookrn/abstract_auth"
   s.summary     = %q{A gem to safely provide external application resources with a coherent and configurable API to a host application's authentication procedures.}
   s.description = %q{A gem to safely provide external application resources with a coherent and configurable API to a host application's authentication procedures.}
 
