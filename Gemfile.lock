@@ -2,13 +2,16 @@ PATH
   remote: .
   specs:
     abstract_auth (0.0.1)
+      module_ext (~> 0.1.0)
 
 GEM
   remote: http://rubygems.org/
   specs:
+    module_ext (0.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   abstract_auth!
+  module_ext (~> 0.1.0)
