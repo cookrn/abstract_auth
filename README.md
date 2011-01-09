@@ -1,5 +1,9 @@
 #AbstractAuth
 
+##WARNING
+
+This gem is still under active development and not ready for primetime!
+
 ##A Short Story
 One day you, Sir Lucius Leftfoot, are hacking your little heart out, and
 you realize that you're writing the same code over and over again to for
