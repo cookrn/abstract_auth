@@ -1,9 +1,5 @@
 #AbstractAuth
 
-##WARNING
-
-This gem is still under active development and not ready for primetime!
-
 ##A Short Story
 One day you, Sir Lucius Leftfoot, are hacking your little heart out, and
 you realize that you're writing the same code over and over again to for
@@ -94,7 +90,7 @@ Thus, a developer might implement the following...
 
 Assuming everything goes as planned, you would be able to call...
 
-    AbstractAuth.authenticate_resource(username,password)
+    AbstractAuth.invoke( :authenticate_resource , username , password )
 
 ...to determine whether a resource was authenticated.
 
