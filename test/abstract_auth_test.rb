@@ -8,6 +8,7 @@ class AbstractAuthTest < Test::Unit::TestCase
     end
   end
 
+  # @todo Replace error message check with assert_rescue
   def test_only_use_symbols_to_define_requirements
     begin
       AbstractAuth.setup do |config|
@@ -18,6 +19,7 @@ class AbstractAuthTest < Test::Unit::TestCase
     end
   end
 
+  # @todo Replace error message check with assert_rescue
   def test_only_use_symbols_to_define_implementations
     begin
       AbstractAuth.implement "bad_def" do
@@ -52,6 +54,7 @@ class AbstractAuthTest < Test::Unit::TestCase
     assert AbstractAuth.implementations[:authenticated_user].is_a? Proc
   end
 
+  # @todo Replace error message check with assert_rescue
   def test_cannot_call_non_required_methods
     begin
       AbstractAuth.invoke :not_required_method
@@ -60,6 +63,7 @@ class AbstractAuthTest < Test::Unit::TestCase
     end
   end
 
+  # @todo Replace error message check with assert_rescue
   def test_cannot_call_non_implemented_methods
     begin
       AbstractAuth.requires :a_sample_method
