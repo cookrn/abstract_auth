@@ -6,6 +6,10 @@ module AbstractAuth
 
     class MalformedRequirementError < StandardError; end
 
+    class NonRequiredImplementationCallError < StandardError; end
+
+    class NotImplementedError < StandardError; end
+
   end
 
 end

@@ -12,4 +12,10 @@ module AbstractAuth
     @@implementations.merge!( { requirement => blk } )
   end
 
+  def self.invoke( method , *args )
+    raise AbstractAuth::Errors::NonRequiredImplementationCallError.new('The requested implementation was not required!') unless @@requirements.include?(method)
+    raise AbstractAuth::Errors::NotImplementedError.new('The requirement was not implemented!') unless @@implementations.has_key?(method)
+    @@implementations[method].call(args)
+  end
+
 end

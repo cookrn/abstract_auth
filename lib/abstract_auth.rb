@@ -15,8 +15,8 @@ module AbstractAuth
   @@implementations = {}
 
   # Define our container to hold APIs required to be implemented
-  #mattr_accessor :requirements
-  #@@requirements = []
+  mattr_accessor :requirements
+  @@requirements = []
 
   # Yield AbstractAuth on setup for fancy configuration
   def self.setup
