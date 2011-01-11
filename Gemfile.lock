@@ -8,6 +8,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     module_ext (0.1.0)
+    rake (0.8.7)
 
 PLATFORMS
   ruby
@@ -15,3 +16,4 @@ PLATFORMS
 DEPENDENCIES
   abstract_auth!
   module_ext (~> 0.1.0)
+  rake (~> 0.8.7)

@@ -1,6 +1,5 @@
 # Requires
-#require 'module_ext'
-require "~/Developer/.rvm/gems/ruby-1.8.7-p302@abstract_auth/gems/module_ext-0.1.0/lib/module_ext/attribute_accessors.rb"
+require 'module_ext'
 
 module AbstractAuth
 

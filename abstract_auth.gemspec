@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "abstract_auth"
 
   s.add_dependency "module_ext", "~> 0.1.0"
+  s.add_development_dependency "rake", "~> 0.8.7"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
