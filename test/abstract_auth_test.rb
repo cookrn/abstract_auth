@@ -8,25 +8,19 @@ class AbstractAuthTest < Test::Unit::TestCase
     end
   end
 
-  # @todo Replace error message check with assert_rescue
   def test_only_use_symbols_to_define_requirements
-    begin
+    assert_raise AbstractAuth::Errors::MalformedRequirementError do
       AbstractAuth.setup do |config|
         config.requires "bad_def"
       end
-    rescue AbstractAuth::Errors::MalformedRequirementError => e
-      assert_equal 'You must define a requirement with a symbol!' , e.message
     end
   end
 
-  # @todo Replace error message check with assert_rescue
   def test_only_use_symbols_to_define_implementations
-    begin
+    assert_raise AbstractAuth::Errors::MalformedImplementationError do
       AbstractAuth.implement "bad_def" do
         p "don't do this"
       end
-    rescue AbstractAuth::Errors::MalformedImplementationError => e
-      assert_equal 'You must define an implementation with a symbol!' , e.message
     end
   end
 
@@ -54,22 +48,16 @@ class AbstractAuthTest < Test::Unit::TestCase
     assert AbstractAuth.implementations[:authenticated_user].is_a? Proc
   end
 
-  # @todo Replace error message check with assert_rescue
   def test_cannot_call_non_required_methods
-    begin
+    assert_raise AbstractAuth::Errors::NonRequiredImplementationCallError do
       AbstractAuth.invoke :not_required_method
-    rescue AbstractAuth::Errors::NonRequiredImplementationCallError => e
-      assert_equal 'The requested implementation was not required!' , e.message
     end
   end
 
-  # @todo Replace error message check with assert_rescue
   def test_cannot_call_non_implemented_methods
-    begin
+    assert_raise AbstractAuth::Errors::NotImplementedError do
       AbstractAuth.requires :a_sample_method
       AbstractAuth.invoke :a_sample_method
-    rescue AbstractAuth::Errors::NotImplementedError => e
-      assert_equal 'The requirement was not implemented!' , e.message
     end
   end
 
